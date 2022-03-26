@@ -5,8 +5,8 @@ import ListItem  from '../components/ListItem';
 const NotesPage = () => {
     return (
         <div>
-            {notes.map(note =>( //importerar data (array) från -> assets -> data.js
-                <ListItem note={note}/> //här skickar vi in ett objekt i ListItem komponenten
+            {notes.map((note, index) =>( //importerar data (array) från -> assets -> data.js
+                <ListItem key={index} note={note}/> //här skickar vi in ett objekt i ListItem komponenten
             ))}
 
             

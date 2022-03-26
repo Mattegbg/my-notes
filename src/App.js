@@ -15,15 +15,16 @@ import NotePage from './pages/NotePage';
 function App() {
   return (
 
+    //Nedan skapar vi routes -> path -> ID för vår data.js
     <div className="App">
-     
-     
+
+
       <Header />
 
       <Routes>
 
-        <Route element={<NotesPage/>} exact path="/"  />
-        <Route element={<NotePage/>} exact path="/note/:id" />
+        <Route element={<NotesPage />} exact path="/" />
+        <Route element={<NotePage />} exact path="/note/:id" />
 
       </Routes>
 

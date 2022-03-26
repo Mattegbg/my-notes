@@ -5,12 +5,19 @@ import { useParams } from 'react-router-dom';
 function NotePage({ match }) {
     const { id } = useParams();
 
-    //let noteId = match.params.id// skapar ID för note till app.js
+    //tog bort raden nedan för att få ID att funka. La till params ovan.
+    //let noteId = match.params.id// skapar ID för note till app.js 
 
     let note = notes.find(note => note.id == id)
     return (
-        <div>
-            <p>{note?.body}</p>
+        <div className='note'>
+            <div className='note-header'>
+
+            </div>
+
+            <textarea value={note?.body}></textarea>
+
+            
         </div>
     )
 }
