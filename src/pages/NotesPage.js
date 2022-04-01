@@ -10,7 +10,7 @@ const NotesPage = () => {
 
             <div className='notes-header'>
                 <h2 className='notes-title'> &#9782;Notes </h2>
-                <p classname='notes-count'>{notes.length}</p>
+                <p className='notes-count'>{notes.length}</p>
             </div>
 
             <div className='notes-list'>

@@ -18,8 +18,8 @@ function App() {
     //Nedan skapar vi routes -> path -> ID för vår data.js
     //Dark i containern kommer från CSS
     <div className="container dark"> 
-      <div className='app'>
-      <Header />
+      <div className="app">
+      <Header /> 
       <Routes>
 
         <Route element={<NotesPage />} exact path="/" />
