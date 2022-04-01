@@ -1,6 +1,8 @@
 import React from 'react';
+import { Link, useParams } from 'react-router-dom';
+import { ReactComponent as ArrowLeft } from '../assets/arrow-left.svg';
 import notes from '../assets/data';
-import { useParams } from 'react-router-dom';
+//import { useParams } from 'react-router-dom';
 
 function NotePage({ match }) {
     const { id } = useParams();
@@ -11,7 +13,16 @@ function NotePage({ match }) {
     let note = notes.find(note => note.id == id)
     return (
         <div className='note'>
+
             <div className='note-header'>
+
+                <h3>
+                <Link to="/">
+                    
+                    <ArrowLeft />
+                
+                </Link>
+                </h3>
 
             </div>
 
