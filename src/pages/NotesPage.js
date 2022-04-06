@@ -1,8 +1,24 @@
-import React from 'react';
-import notes from '../assets/data';
+import React, { useState, useEffect } from 'react';
+//import notes from '../assets/data';
 import ListItem from '../components/ListItem';
 
+
+//hämtar data från vår provisoriska "cloud" databas/server på port:5000
 const NotesPage = () => {
+
+    let [notes, setNotes] = useState([])
+
+    useEffect(() => { 
+        getNotes()
+    }, [])
+
+    let getNotes = async () => {
+        let response = await fetch('http://localhost:5000/notes')
+        let data = await response.json()
+
+        setNotes(data)
+    }
+
     return (
         // under där vi skriver "&#9782;" gör att vi får en symbol som liknar en lista eller liknande brevid notes. Bra trick!
         // Rad 12 "notes-count" gör att vi ser hur många notes vi har på sidan. 
