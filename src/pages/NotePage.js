@@ -15,6 +15,11 @@ function NotePage({ match }) {
         <div className='note'>
 
             <div className='note-header'>
+                <h3>
+                    <Link to="/">
+                        <ArrowLeft />
+                    </Link>
+                </h3>
 
                 <h3>
                 <Link to="/">
@@ -28,7 +33,7 @@ function NotePage({ match }) {
 
             <textarea value={note?.body}></textarea>
 
-            
+
         </div>
     )
 }
