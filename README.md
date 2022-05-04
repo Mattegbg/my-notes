@@ -14,6 +14,23 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
+### `npm run server`
+
+JSON-Server backend/"fake"-databas
+
+https://www.npmjs.com/package/json-server
+
+ Resources
+  http://localhost:5000/notes
+
+  Home
+  http://localhost:5000
+  
+  SKRIV DE NEDAN I PACKAGE.JSON i VS CODE INNUTI "SCRIPTS".
+
+     "server": "json-server --watch db.json --port 5000" 
+
+
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
