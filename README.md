@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+Lession bought from UDEMY, link: https://www.udemy.com/course/react-crash-course/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
