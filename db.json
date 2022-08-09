@@ -1,19 +1,29 @@
 {
   "notes": [
     {
-      "id": 1,
-      "body": "todays agenda\n\n\nsdsadas\n- Walk Dog\n- Feed fish\n- Play basketball\n- Eat a salad\n\n",
-      "updated": "2022-05-09T09:32:58.277Z"
-    },
-    {
-      "id": 2,
-      "body": "Bob from bar down the \n\n- Take out trash\n- Eat food",
-      "updated": "2022-05-09T09:33:02.298Z"
-    },
-    {
       "id": 3,
-      "body": "Wash car",
-      "updated": "2021-07-13T19:46:12.187306Z"
+      "body": "Wash car\nasdasdasd\n\n\nsadasd\n\nbajsman",
+      "updated": "2022-08-08T12:34:33.814Z"
+    },
+    {
+      "body": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\n",
+      "updated": "2022-08-09T13:36:10.806Z",
+      "id": 4
+    },
+    {
+      "body": "-new note",
+      "updated": "2022-08-08T16:29:56.286Z",
+      "id": 5
+    },
+    {
+      "body": "new",
+      "updated": "2022-08-09T13:36:20.771Z",
+      "id": 6
+    },
+    {
+      "body": "new",
+      "updated": "2022-08-09T13:36:22.288Z",
+      "id": 7
     }
   ]
 }

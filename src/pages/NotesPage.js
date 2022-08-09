@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 //import notes from '../assets/data';
 import ListItem from '../components/ListItem';
+import AddButton from '../components/AddButton';
+
 
 
 //hämtar data från vår provisoriska "cloud" databas/server på port:5000
@@ -37,6 +39,8 @@ const NotesPage = () => {
 
             </div>
 
+        
+            <AddButton />
 
 
 

@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import { Link , useParams} from 'react-router-dom';
 import { ReactComponent as ArrowLeft } from '../assets/arrow-left.svg';
+
 //import notes from '../assets/data';
 //import { useParams } from 'react-router-dom';
 
@@ -39,21 +40,52 @@ function NotePage({ match, history }) {
         })
     }
 
-    let handleSubmit = () => {
-        updateNote()
+    //Creates a new note
+    let createNote = async () => {
+        await fetch(`http://localhost:5000/notes/`, {
+            method: 'POST',
+            headers: {
+                'Content-Type':'application/json'
+            },
+            body:JSON.stringify({...note, 'updated': new Date() })
+        })
+    }
+
+
+//Links to the Deletebutton further down, when press 'DELETE' it relocates to the homepage. Deletefunction to deletebutton.     
+    let deleteNote = async () => {
+        await fetch(`http://localhost:5000/notes/${id}`, {
+            method:'DELETE',
+            headers:{
+                'Content-Type':'application/json'
+            },
+            body:JSON.stringify(note)
+        })
         history.push('/')
     }
+
+//noteId undefined???? skrev id istället för noteID FUNKADE. 
+
+    let handleSubmit = () => {
+        if(id != 'new' && !note.body ){
+            deleteNote()
+        } else if(id !== 'new'){
+            updateNote()
+        }else if(id === 'new' && note !==null){
+            createNote()
+
+        }
+
+        history.push('/')
+    }
+
 
     //let note = notes.find(note => note.id == id)
     return (
         <div className='note'>
 
             <div className='note-header'>
-                <h3>
-                    <Link to="/">
-                        <ArrowLeft />
-                    </Link>
-                </h3>
+                
 
                 <h3>
                 <Link to="/">
@@ -61,7 +93,16 @@ function NotePage({ match, history }) {
                     <ArrowLeft onClick={handleSubmit} />
                 
                 </Link>
-                </h3>
+
+                
+                </h3> 
+                
+                {id !== 'new' ? (
+                    <button onClick={deleteNote}>Delete</button>
+                ):( 
+                    <button onClick={handleSubmit}>Done</button>
+
+                )}
 
             </div>
 
